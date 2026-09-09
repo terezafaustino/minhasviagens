@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Travel Planner</title><link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar"><a class="brand" href="#dashboard"><span>✦</span> travel planner</a>
+    <div class="trip-mini"><div class="flag">✈</div><div><b>Sudeste Asiático</b><small>06 fev — 21 mai, 2027</small></div></div>
+    <nav id="nav"><button data-page="dashboard" class="active">◈ <span>Visão geral</span></button><button data-page="itinerary">⌁ <span>Roteiro</span></button><button data-page="flights">✈ <span>Passagens</span></button><button data-page="stays">⌂ <span>Hospedagens</span></button><button data-page="activities">◎ <span>Passeios</span></button><button data-page="expenses">▣ <span>Gastos</span></button><button data-page="finance">◒ <span>Financeiro</span></button></nav>
+    <div class="sidebar-bottom"><button data-page="settings">⚙ <span>Configurações</span></button><button data-page="trips">↗ <span>Minhas viagens</span></button></div>
+  </aside>
+  <main><header><button class="mobile-menu" aria-label="Abrir menu">☰</button><div class="crumb" id="crumb">SUA PRÓXIMA AVENTURA <strong>/ Visão geral</strong></div><div class="header-actions"><button class="icon-btn">⌕</button><button class="avatar">TF</button></div></header>
+  <section id="view"></section></main>
+</div>
+<div class="modal-backdrop" id="modal"><div class="modal"><button class="close" onclick="closeModal()">×</button><div id="modal-content"></div></div></div>
+<script src="app.js"></script></body></html>
