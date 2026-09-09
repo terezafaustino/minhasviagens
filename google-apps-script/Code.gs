@@ -25,7 +25,7 @@ function replaceRows(name, headers, rows) {
 function saveState(state) {
   replaceRows('Viagens',['id','nome','rota','ida','volta','orçamento','status','cashback','pontos'],state.trips.map(t=>[t.id,t.name,t.route,t.start,t.end,t.budget,t.status,t.cashback,t.points]));
   replaceRows('Destinos',['viagem_id','bandeira','cidade','país','dias'],state.trips.flatMap(t=>t.destinations.map(x=>[t.id,...x])));
-  replaceRows('Passagens',['viagem_id','trecho','data','companhia','custo','status','pagamento','milhas'],state.trips.flatMap(t=>t.flights.map(x=>[t.id,...x])));
+  replaceRows('Passagens',['viagem_id','trecho','data','companhia','custo','status','pagamento','milhas','programa_milhas'],state.trips.flatMap(t=>t.flights.map(x=>[t.id,...x])));
   replaceRows('Hospedagens',['viagem_id','nome','destino','período','custo','status'],state.trips.flatMap(t=>t.stays.map(x=>[t.id,...x])));
   replaceRows('Passeios',['viagem_id','nome','data','destino','custo','status'],state.trips.flatMap(t=>t.activities.map(x=>[t.id,...x])));
   replaceRows('Gastos',['viagem_id','descrição','data','pagamento','custo'],state.trips.flatMap(t=>t.expenses.map(x=>[t.id,...x])));
